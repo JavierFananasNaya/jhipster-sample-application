@@ -1,0 +1,42 @@
+{
+  "name": "Measure",
+  "fields": [
+    {
+      "fieldName": "temperature",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "symptom",
+      "fieldType": "SYMPTOMS",
+      "fieldValues": "NONE,DISNEA,FEVER"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "contactWithInfected",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "measure",
+      "relationshipName": "employee",
+      "otherEntityField": "name"
+    }
+  ],
+  "changelogDate": "20200521105009",
+  "entityTableName": "measure",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,14 @@
+
+
+/**
+ * The Employee entity.
+ */
+entity Employee { name String, surname String, department String, age Integer}
+
+entity Measure { temperature Float, symptom SYMPTOMS, duration Integer, contactWithInfected Boolean}
+
+enum SYMPTOMS { NONE, DISNEA, FEVER}
+
+relationship OneToMany{
+Employee{ Measure(name) } to Measure { Employee(name) }
+}

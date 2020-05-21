@@ -1,0 +1,11 @@
+id;temperature;symptom;duration;contact_with_infected
+1;23811;NONE;30267;false
+2;98377;DISNEA;83211;true
+3;20878;DISNEA;12591;false
+4;44630;DISNEA;7349;false
+5;34780;NONE;37968;false
+6;96635;NONE;78251;true
+7;20417;DISNEA;31047;true
+8;96038;FEVER;8907;false
+9;10049;FEVER;611;false
+10;3068;NONE;62674;true

@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="measure">
+            <h2><span>Measure</span> {{ measure.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Temperature</span></dt>
+                <dd>
+                    <span>{{ measure.temperature }}</span>
+                </dd>
+                <dt><span>Symptom</span></dt>
+                <dd>
+                    <span>{{ measure.symptom }}</span>
+                </dd>
+                <dt><span>Duration</span></dt>
+                <dd>
+                    <span>{{ measure.duration }}</span>
+                </dd>
+                <dt><span>Contact With Infected</span></dt>
+                <dd>
+                    <span>{{ measure.contactWithInfected }}</span>
+                </dd>
+                <dt><span>Employee</span></dt>
+                <dd>
+                    <div *ngIf="measure.employee">
+                        <a [routerLink]="['/employee', measure.employee?.id, 'view']">{{ measure.employee?.name }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/measure', measure.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
